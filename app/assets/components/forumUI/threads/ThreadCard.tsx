@@ -1,4 +1,4 @@
-import useUsersStore from "@/app/stores/userStores";
+import useUsersStore from "@/app/stores/usersStores";
 import { HeartFilledIcon } from "@radix-ui/react-icons";
 import { Avatar } from "@radix-ui/themes";
 

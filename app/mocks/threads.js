@@ -8,6 +8,7 @@ const threads = [
 		content: faker.lorem.paragraphs(2), // Generate longer Arabic text
 		created_at: faker.date.past(),
 		likes: 14,
+		comments_count: 3, // Number of comments linked to this thread
 	},
 	{
 		id: 2,
@@ -16,6 +17,7 @@ const threads = [
 		content: faker.lorem.paragraphs(2),
 		created_at: faker.date.past(),
 		likes: 2,
+		comments_count: 3, // Number of comments linked to this thread
 	},
 	{
 		id: 3,
@@ -24,7 +26,7 @@ const threads = [
 		content: faker.lorem.paragraphs(2),
 		created_at: faker.date.past(),
 		likes: 23,
+		comments_count: 3, // Number of comments linked to this thread
 	},
 ];
-
 export default threads;

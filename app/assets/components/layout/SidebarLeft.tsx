@@ -4,6 +4,7 @@ import { Box } from "@radix-ui/themes";
 import { v4 as uuidv4 } from "uuid";
 import ForumButton from "../common/Button";
 import SearchBar from "../common/TextField";
+
 export default function SidebarLeft() {
 	const categories = useCategoriesStore((state) => state.categoriesList);
 
@@ -20,7 +21,10 @@ export default function SidebarLeft() {
 						<SearchBar />
 					</div>
 					{categories.map((category) => (
-						<li key={uuidv4()}>
+						<li
+							key={uuidv4()}
+							className="hover:text-white cursor-pointer"
+						>
 							<span>{category.icon}</span>
 							<span>{category.name}</span>
 						</li>

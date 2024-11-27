@@ -7,7 +7,7 @@ export default async function ThreadPage({
 }) {
 	const slug = await params;
 	return (
-		<div className=" col-start-3 row-start-2">
+		<div className=" col-start-3 col-span-3 row-start-2">
 			<Thread threadId={slug.threadid} />
 		</div>
 	);

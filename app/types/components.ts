@@ -16,3 +16,9 @@ export type ThreadCardProps = {
 export type ThreadProps = {
 	threadId: number;
 };
+
+export type CommentProps = {
+	userId: number;
+	content: string;
+	date: string;
+};

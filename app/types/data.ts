@@ -17,9 +17,21 @@ export type Comments = {
 export type Category = {
 	id: number;
 	name: string;
+	engName: string;
 	icon: string;
 	description: string;
 	created_at: Date;
+}[];
+
+export type Threads = {
+	id: number;
+	category: number;
+	title: string;
+	user_id: number;
+	content: string;
+	created_at: Date;
+	likes: number;
+	comments_count: number;
 }[];
 
 export type Thread = {
@@ -31,7 +43,7 @@ export type Thread = {
 	created_at: Date;
 	likes: number;
 	comments_count: number;
-}[];
+};
 
 export type User = {
 	id: number;

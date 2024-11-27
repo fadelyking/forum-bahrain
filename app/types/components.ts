@@ -12,3 +12,7 @@ export type ThreadCardProps = {
 	created: string;
 	comments: Comments;
 };
+
+export type ThreadProps = {
+	threadId: number;
+};

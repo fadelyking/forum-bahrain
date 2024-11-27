@@ -4,7 +4,7 @@ import RecentThreads from "../forumUI/widgets/RecentThreads";
 
 export default function SidebarRight() {
 	return (
-		<div className="col-start-2 row-start-2 flex flex-col gap-3">
+		<div className="flex flex-col col-start-2 row-start-2 gap-6">
 			<Box className="flex bg-[#272727] rounded-lg">
 				<Sponser />
 				{/* Today's Sponser */}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@radix-ui/themes/styles.css";
-import { Theme, ThemePanel } from "@radix-ui/themes";
+import { Theme } from "@radix-ui/themes";
 import { Noto_Kufi_Arabic } from "next/font/google";
 import "./globals.css";
 
@@ -24,7 +24,7 @@ export default function RootLayout({
 		<html lang="ar">
 			<body className={`bg-background ${notoKufi.variable} antialiased `}>
 				<Theme grayColor="mauve">
-					<div className="bg-background h-screen">{children}</div>
+					<div className="bg-background">{children}</div>
 				</Theme>
 			</body>
 		</html>

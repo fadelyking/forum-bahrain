@@ -25,7 +25,7 @@ export default function Sponser() {
 					<Avatar radius="full" src={donator.avatar} fallback={""} />
 				</div>
 
-				<div className="text-white bg-[#2c2d2c] text-sm text-end p-4 rounded-lg">
+				<div className="text-[#bdbdbd] bg-[#2c2d2c] text-sm text-end p-4 rounded-lg">
 					{donator.bio}
 				</div>
 			</div>

@@ -35,8 +35,8 @@ export default function ThreadCard({
 				<div className="flex flex-col gap-5 p-3">
 					<div className="flex gap-5 items-end justify-end text-end">
 						<div className="flex flex-col gap-1 items-end">
-							<div>{title}</div>
-							<div className="flex gap-2 text-xs items-center text-[#848484]">
+							<div className="text-xl">{title}</div>
+							<div className="flex gap-2 text-xs items-center body_text">
 								<span>{created}</span>
 								<div className="rounded-full bg-green-600 w-1 h-1"></div>
 								<span>{userInfo.username}</span>

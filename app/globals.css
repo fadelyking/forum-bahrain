@@ -17,6 +17,10 @@ body {
 	font-family: var(--font-noto-kufi);
 }
 
+.body_text {
+	color: #848484;
+}
+
 .noto_kufi {
 	font-family: var(--font-noto-kufi);
 }

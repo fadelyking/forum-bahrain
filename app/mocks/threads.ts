@@ -32,5 +32,25 @@ const threads: Threads = [
 		likes: 23,
 		comments_count: 3, // Number of comments linked to this thread
 	},
+	{
+		id: 3,
+		category: 2,
+		title: faker.lorem.words(3),
+		user_id: 3,
+		content: faker.lorem.paragraphs(2),
+		created_at: faker.date.past(),
+		likes: 23,
+		comments_count: 3, // Number of comments linked to this thread
+	},
+	{
+		id: 3,
+		category: 2,
+		title: faker.lorem.words(3),
+		user_id: 3,
+		content: faker.lorem.paragraphs(2),
+		created_at: faker.date.past(),
+		likes: 23,
+		comments_count: 3, // Number of comments linked to this thread
+	},
 ];
 export default threads;

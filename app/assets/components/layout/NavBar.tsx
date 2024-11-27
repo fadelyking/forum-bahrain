@@ -5,7 +5,7 @@ import LoginDialog from "../common/LoginDialog";
 export default function NavBar() {
 	return (
 		<div className="bg-[#272727] p-5 px-20 flex col-start-1 col-span-full justify-end items-center">
-			<ul className="noto_kufi flex gap-5 text-white items-center">
+			<ul className="noto_kufi flex gap-5 text-[#bdbdbd] items-center">
 				<li className="hover:text-[#2bad73] cursor-pointer">
 					الأكثر تداولاً
 				</li>

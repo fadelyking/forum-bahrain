@@ -18,7 +18,7 @@ export default function RecentThreads() {
 				{recentThreads.map((thread) => (
 					<div
 						key={thread.id}
-						className="p-4 bg-[#363737] text-white rounded-lg shadow-lg hover:outline hover:outline-2 hover:outline-[#2bad73] hover:cursor-pointer"
+						className="p-4 bg-[#363737] text-[#bdbdbd] rounded-lg shadow-lg hover:outline hover:outline-2 hover:outline-[#2bad73] hover:cursor-pointer"
 					>
 						<div className="flex flex-col gap-1">
 							<h3 className="text-xs font-semibold">

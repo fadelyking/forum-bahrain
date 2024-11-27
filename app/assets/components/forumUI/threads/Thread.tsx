@@ -3,6 +3,7 @@ import useCommentsStore from "@/app/stores/commentsStore";
 import useThreadsStore from "@/app/stores/threadsStore";
 import useUsersStore from "@/app/stores/usersStores";
 import Comment from "../comments/Comment";
+import CreateComment from "../comments/CreateComment";
 import { ThreadProps } from "@/app/types/components";
 import formatDate from "@/app/utils/dateFormatter";
 import { Avatar } from "@radix-ui/themes";
@@ -35,7 +36,7 @@ export default function Thread({ threadId }: ThreadProps) {
 		return <div>Loading...</div>; // Show loading state while fetching the thread
 	}
 	return (
-		<div className="noto_kufi flex flex-col bg-[#2c2d2c] rounded-xl text-white text-xl p-4">
+		<div className="noto_kufi flex flex-col bg-[#2c2d2c] rounded-xl text-xl p-4 text-[#bdbdbd]">
 			<div className="flex flex-col gap-5 p-3">
 				<div className="flex gap-5 items-end justify-end text-end">
 					<div className="flex flex-col gap-1 items-end">
@@ -51,10 +52,8 @@ export default function Thread({ threadId }: ThreadProps) {
 					</div>
 				</div>
 				<div className="text-end">{currentThread.content}</div>
-				<div className="bg-[#363737] p-3 rounded-md text-end items-end flex flex-col gap-3">
-					<span className="text-sm">...اترك تعليق</span>
-				</div>
 			</div>
+			<CreateComment />
 			<div className="bg-[#363737] p-3 rounded-md text-end items-end flex flex-col">
 				<ul className="flex flex-col gap-3">
 					{threadComments.map((comment) => (

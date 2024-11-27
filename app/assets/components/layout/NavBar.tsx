@@ -1,5 +1,6 @@
 import { SunIcon } from "@radix-ui/react-icons";
 import ForumButton from "../common/Button";
+import LoginDialog from "../common/LoginDialog";
 
 export default function NavBar() {
 	return (
@@ -16,10 +17,10 @@ export default function NavBar() {
 				<li className="hover:text-[#2bad73] cursor-pointer">نشاطك</li>
 				{/* Your Activity */}
 				<li className="hover:text-[#2bad73] cursor-pointer">
-					تسجيل الدخول
+					<LoginDialog />
 				</li>
 				{/* Login/Profile */}
-				<li className="hover:text-[#2bad73] cursor-pointer">
+				<li className=" cursor-pointer">
 					<ForumButton>أنشئ منشوراً جديد</ForumButton>
 				</li>
 				{/* Create New Thread */}

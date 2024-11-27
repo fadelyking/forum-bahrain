@@ -1,6 +1,6 @@
 import { fakerAR as faker } from "@faker-js/faker";
 import { User } from "../types/data";
-
+faker.seed(534231233);
 const users: User = [
 	{
 		id: 1,

@@ -1,7 +1,7 @@
 import { fakerAR as faker } from "@faker-js/faker";
-import { Thread } from "../types/data";
-
-const threads: Thread = [
+import { Threads } from "../types/data";
+faker.seed(123);
+const threads: Threads = [
 	{
 		id: 1,
 		category: 2,

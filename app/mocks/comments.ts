@@ -1,6 +1,6 @@
 import { fakerAR as faker } from "@faker-js/faker";
 import { Comments } from "../types/data";
-
+faker.seed(123);
 const comments: Comments = [
 	{
 		id: 1,

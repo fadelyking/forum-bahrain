@@ -1,13 +1,15 @@
-import { faker } from "@faker-js/faker";
+import { fakerAR as faker } from "@faker-js/faker";
+import { User } from "../types/data";
 
-const users = [
+const users: User = [
 	{
 		id: 1,
 		username: "fadely",
 		password: "Aa32231472",
 		avatar: faker.image.avatar(),
-		bio: faker.person.bio(),
+		bio: faker.lorem.paragraphs(2),
 		role: 1,
+		donations: [30, 60],
 		created_at: faker.date.past(),
 		updated_at: faker.date.recent(),
 	},

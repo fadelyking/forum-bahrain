@@ -1,7 +1,7 @@
 import categories from "../mocks/categories";
 import { create } from "zustand";
-
-const useCategoriesStore = create(() => ({
+import { CategoriesStore } from "../types/stores";
+const useCategoriesStore = create<CategoriesStore>(() => ({
 	categoriesList: categories,
 }));
 

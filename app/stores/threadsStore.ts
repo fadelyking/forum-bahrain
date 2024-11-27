@@ -1,7 +1,7 @@
 import threads from "../mocks/threads";
 import { create } from "zustand";
-
-const useThreadsStore = create(() => ({
+import { ThreadsStore } from "../types/stores";
+const useThreadsStore = create<ThreadsStore>(() => ({
 	threadsList: threads,
 }));
 

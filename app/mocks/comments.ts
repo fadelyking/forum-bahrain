@@ -1,6 +1,7 @@
 import { fakerAR as faker } from "@faker-js/faker";
+import { Comments } from "../types/data";
 
-const comments = [
+const comments: Comments = [
 	{
 		id: 1,
 		thread_id: 1,

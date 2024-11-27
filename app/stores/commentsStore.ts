@@ -1,7 +1,7 @@
 import comments from "../mocks/comments";
 import { create } from "zustand";
-
-const useCommentsStore = create(() => ({
+import { CommentsStore } from "../types/stores";
+const useCommentsStore = create<CommentsStore>(() => ({
 	commentsList: comments,
 }));
 

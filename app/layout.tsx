@@ -3,6 +3,9 @@ import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import { Noto_Kufi_Arabic } from "next/font/google";
 import "./globals.css";
+import SidebarLeft from "./assets/components/layout/SidebarLeft";
+import SidebarRight from "./assets/components/layout/SidebarRight";
+import NavBar from "./assets/components/layout/NavBar";
 
 const notoKufi = Noto_Kufi_Arabic({
 	subsets: ["arabic", "latin"],
@@ -24,7 +27,12 @@ export default function RootLayout({
 		<html lang="ar">
 			<body className={`bg-background ${notoKufi.variable} antialiased `}>
 				<Theme grayColor="mauve">
-					<div className="bg-background">{children}</div>
+					<div className="h-screen bg-background grid grid-cols-7 gap-6">
+						<NavBar />
+						<SidebarLeft />
+						{children}
+						<SidebarRight />
+					</div>
 				</Theme>
 			</body>
 		</html>

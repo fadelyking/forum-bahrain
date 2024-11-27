@@ -1,8 +1,9 @@
 import useUsersStore from "@/app/stores/usersStores";
+import { ThreadCardProps } from "@/app/types/components";
 import formatDate from "@/app/utils/dateFormatter";
 import { HeartFilledIcon } from "@radix-ui/react-icons";
 import { Avatar } from "@radix-ui/themes";
-
+import { Comment } from "@/app/types/data";
 export default function ThreadCard({
 	userId,
 	title,
@@ -10,19 +11,23 @@ export default function ThreadCard({
 	content,
 	created,
 	comments,
-}) {
+}: ThreadCardProps) {
 	const users = useUsersStore((state) => state.usersList);
 
 	// Finding info
 	const userInfo = users.find((user) => user.id === userId);
 
-	let lastComment = null;
-	if (comments?.length > 0) {
+	let lastComment: Comment | null = null;
+	if (comments.length > 0) {
 		lastComment = comments
 			.slice()
-			.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0];
+			.sort(
+				(a, b) => +new Date(b.created_at) - +new Date(a.created_at)
+			)[0];
 	}
-	const commenterInfo = users.find((user) => user.id === lastComment.user_id);
+	const commenterInfo = lastComment
+		? users.find((user) => user.id === lastComment.user_id)
+		: null;
 
 	if (userInfo)
 		return (
@@ -33,7 +38,7 @@ export default function ThreadCard({
 							<div>{title}</div>
 							<div className="flex gap-2 text-xs items-center text-[#848484]">
 								<span>{created}</span>
-								<div class="rounded-full bg-green-600 w-1 h-1"></div>
+								<div className="rounded-full bg-green-600 w-1 h-1"></div>
 								<span>{userInfo.username}</span>
 							</div>
 						</div>
@@ -53,10 +58,14 @@ export default function ThreadCard({
 						</div>
 					</div>
 					<div className="bg-[#363737] p-3 rounded-lg text-end items-end flex flex-col gap-3">
-						<span>{lastComment.content}</span>
+						<span>
+							{lastComment
+								? lastComment.content
+								: "لا يوجد تعليقات"}
+						</span>
 						<div className="flex gap-2 items-center text-[#848484]">
 							<div>{formatDate(commenterInfo?.created_at)}</div>
-							<div class="rounded-full bg-green-600 w-1 h-1"></div>
+							<div className="rounded-full bg-green-600 w-1 h-1"></div>
 							<strong>{commenterInfo?.username}</strong>
 							<Avatar
 								radius="full"

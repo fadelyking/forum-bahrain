@@ -10,7 +10,7 @@ export default function SidebarLeft() {
 
 	return (
 		<div className="col-start-6 col-span-1">
-			<Box>
+			<Box className="sticky">
 				<div className="flex items-end justify-end">
 					<ul className="noto_kufi flex flex-col gap-3 font-bold justify-end items-end text-md p-6 bg-[#272727] text-[#bdbdbd] rounded-lg">
 						<div className="flex flex-col gap-3 items-center justify-center">

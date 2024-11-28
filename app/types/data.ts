@@ -52,6 +52,8 @@ export type User = {
 	avatar: string;
 	bio: string;
 	role: number;
+	threads: number[];
+	comments: number[];
 	donations?: number[]; // Optional if donations might not exist
 	created_at: Date;
 	updated_at: Date;

@@ -7,7 +7,7 @@ export default function LoginDialog() {
 				<span>تسجيل الدخول</span>
 			</Dialog.Trigger>
 
-			<Dialog.Content size="3" className="noto_kufi text-center">
+			<Dialog.Content size="3" className="noto_kufi text-center bg-black">
 				<Dialog.Title>سلام عليكم</Dialog.Title>
 				<Dialog.Description size="2" mb="4">
 					استخدم ايميلك او اي خدمة من الخدمات المتوفرة لتسجيل الدخول

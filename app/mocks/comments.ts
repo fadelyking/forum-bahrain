@@ -65,34 +65,6 @@ const comments: Comments = [
 		content: faker.lorem.sentence(),
 		created_at: faker.date.past(),
 	},
-	{
-		id: 9,
-		thread_id: 3,
-		user_id: 6,
-		content: faker.lorem.sentence(),
-		created_at: faker.date.past(),
-	},
-	{
-		id: 9,
-		thread_id: 3,
-		user_id: 6,
-		content: faker.lorem.sentence(),
-		created_at: faker.date.past(),
-	},
-	{
-		id: 9,
-		thread_id: 3,
-		user_id: 6,
-		content: faker.lorem.sentence(),
-		created_at: faker.date.past(),
-	},
-	{
-		id: 9,
-		thread_id: 3,
-		user_id: 6,
-		content: faker.lorem.sentence(),
-		created_at: faker.date.past(),
-	},
 ];
 
 export default comments;

@@ -3,7 +3,6 @@ import useCategoriesStore from "@/app/stores/categoriesStore";
 import { Box } from "@radix-ui/themes";
 import { v4 as uuidv4 } from "uuid";
 import ForumButton from "../common/Button";
-import SearchBar from "../common/TextField";
 
 export default function SidebarLeft() {
 	const categories = useCategoriesStore((state) => state.categoriesList);
